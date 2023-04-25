@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../Base/Button";
 import Container from "Component/Base/Container";
+import Logo from "../../static/images/homepage/logo.png";
 
 const Header = () => {
   const [shadow, setShadow] = useState(false);
@@ -24,9 +25,7 @@ const Header = () => {
         <Container>
           <div className="main">
             <div className="logo">
-              <Button color="#2d9bf0" fontWeight={"500"}>
-                Your Logo
-              </Button>
+              <img src={Logo.src} />
             </div>
             <div className="menu">
               <ul>
@@ -77,6 +76,14 @@ const Header = () => {
           }
           li:hover {
             letter-spacing: 1.1;
+          }
+          .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          img {
+            height: 50px;
           }
         `}
       </style>
